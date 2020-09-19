@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import Datatable from './datatable';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -24,7 +25,7 @@ export default function App() {
   return (
     <div>
     <div>This is for filter</div>
-    <div>This is for datatables</div>
+    <Datatable data = {data} />
       
     </div>
   );
