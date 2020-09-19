@@ -18,7 +18,14 @@ export default function Datatable({ data }) {
             </tr>
         </thead>
         <tbody style={tableStyle}>
-            <tr>No One</tr>
+            {data.map(row => 
+            <tr>
+                {
+                    columns.map(column => <td>{row[column]}</td>)
+                }
+            </tr>)
+
+            }
         </tbody>
     </table>
 }
