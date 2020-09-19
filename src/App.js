@@ -21,6 +21,10 @@ export default function App() {
     
   }, []);
   
+  function searchUser(rows) {
+    return rows.filter(row => row.name.toLowerCase().indexOf(q) > -1)
+  }
+
   return (
     <div>
     <div><h6>Filter Data</h6>
@@ -28,7 +32,7 @@ export default function App() {
     value={q} 
     onChange={(e) => setQ(e.target.value)}/>
     </div>
-    <Datatable data = {data} />
+    <Datatable data = {searchUser(data)} />
       
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 export default function Datatable({ data }) {
     const tableStyle = {
         "width": "80%",
-        "border-collapse": "collapse",
+        "borderCollapse": "collapse",
         "border": "1px solid black"
      };
     
