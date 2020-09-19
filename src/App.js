@@ -20,7 +20,6 @@ export default function App() {
     });
     
   }, []);
-  console.log(data);
   
   return (
     <div>

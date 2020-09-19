@@ -1,16 +1,20 @@
 import React from "react";
 
 export default function Datatable({ data }) {
-    var tableStyle = {
+    const tableStyle = {
+        "width": "80%",
         "border-collapse": "collapse",
-        "padding": "5px",
-        "margin": "10px",
         "border": "1px solid black"
      };
+    
+    const columns = data[0] && Object.keys(data[0]);
+
     return <table cellPadding={1} cellSpacing={1} style={tableStyle}>
         <thead style={tableStyle}>
             <tr> 
-            <th>UserName</th>
+            {data[0] && columns.map((heading) => 
+            <th>{heading}</th>
+            )}
             </tr>
         </thead>
         <tbody style={tableStyle}>
