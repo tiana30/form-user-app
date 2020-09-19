@@ -22,11 +22,12 @@ export default function App() {
   }, []);
   
   function searchUser(rows) {
+    const columns = data[0] && Object.keys(data[0]);
+
     return rows.filter(row => 
-      row.name.toLowerCase().indexOf(q) > -1 || 
-      row.email.toLowerCase().indexOf(q) > -1 ||
-      row.gender.toLowerCase().indexOf(q) > -1 ||
-      row.status.toLowerCase().indexOf(q) > -1
+     columns.some((column) => 
+     row[column].toString().toLowerCase().indexOf(q) > -1 
+     )
       )
   }
 
