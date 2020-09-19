@@ -23,7 +23,11 @@ export default function App() {
   
   return (
     <div>
-    <div>This is for filter</div>
+    <div><h6>Filter Data</h6>
+    <input type="text" 
+    value={q} 
+    onChange={(e) => setQ(e.target.value)}/>
+    </div>
     <Datatable data = {data} />
       
     </div>
